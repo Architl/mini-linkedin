@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';
 import Navbar from './components/Navbar';
+import UserProfile from './pages/UserProfile';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/create" element={<CreatePost />} />
+        <Route path="/user/:id" element={<UserProfile />} />
       </Routes>
     </Router>
   );
