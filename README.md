@@ -9,7 +9,7 @@ A minimal social community platform inspired by LinkedIn, built as part of the F
 
 🔗 https://mini-linkedin-frontend-tsma.onrender.com/
 
-Please note: The server is hosted on Render's free tier, so it might take a minute to load.
+⚠️ *Please note: The server is hosted on Render's free tier, so it might take a minute to load.*
 
 ## 📂 GitHub Repository
 
@@ -52,3 +52,39 @@ Please note: The server is hosted on Render's free tier, so it might take a minu
 - View any user’s profile
 - See user's own posts and those by other users
 
+---
+
+## 🧰 Local Setup Instructions
+
+### 🔽 Prerequisites
+- Node.js and npm installed
+- MongoDB Atlas account (or local MongoDB setup)
+
+---
+
+### 🔧 Backend Setup
+
+```bash
+git clone https://github.com/Architl/mini-linkedin.git
+cd mini-linkedin/server
+npm install
+```
+
+### Create a .env file in the server directory with:
+
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+
+
+### Start the backend:
+
+```bash
+node index.js
+```
+
+### Frontend Setup:
+```bash
+cd ../client
+npm install
+npm start
+```
