@@ -9,7 +9,12 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+const allowedOrigins = ['https://mini-linkedin-frontend-tsma.onrender.com']; // Replace with your actual frontend Render URL
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 app.use(express.json());
 
 // MongoDB Connection
@@ -22,9 +27,9 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
-// Future: app.use('/api/posts', require('./routes/posts'));
 app.use('/api/posts', require('./routes/posts'));
 
+// Default route
 app.get('/', (req, res) => {
   res.send('Mini LinkedIn API is running...');
 });
