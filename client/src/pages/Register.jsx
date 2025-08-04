@@ -27,7 +27,7 @@ function Register() {
     e.preventDefault();
     try {
       // Send POST request to register endpoint
-      const res = await API.post('/auth/register', formData);
+      const res = await API.post('/api/auth/register', formData);
 
       // Store token in localStorage and redirect to home page
       localStorage.setItem('token', res.data.token);

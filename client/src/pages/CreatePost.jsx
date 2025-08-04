@@ -22,14 +22,14 @@ function CreatePost() {
     try {
       // Send POST request to create a new post with the content and token
       await axios.post(
-        'http://localhost:5000/api/posts',
-        { content },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
-        }
-      );
+  'https://mini-linkedin-1afn.onrender.com/api/posts', // updated from localhost
+  { content },
+  {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }
+);
       
       // Notify user and redirect to home page after successful post creation
       alert('Post created!');
