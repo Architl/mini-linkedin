@@ -14,7 +14,7 @@ function Home() {
     const fetchPosts = async () => {
       try {
         // API call to fetch all posts
-        const res = await api.get('/posts');
+        const res = await api.get('/api/posts');
         setPosts(res.data); // Store posts in state
       } catch (err) {
         // Set error message if API call fails
