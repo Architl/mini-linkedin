@@ -23,7 +23,7 @@ function Login() {
     setError('');
     try {
       // Send login request to backend with form data
-      const res = await api.post('/auth/login', formData);
+      const res = await api.post('/api/auth/login', formData);
 
       // Save received JWT token to localStorage
       localStorage.setItem('token', res.data.token);
