@@ -52,6 +52,3 @@ Please note: The server is hosted on Render's free tier, so it might take a minu
 - View any user’s profile
 - See user's own posts and those by other users
 
-
-> You can register your own account, or use the following:
-
